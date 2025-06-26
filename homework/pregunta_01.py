@@ -30,9 +30,9 @@ def pregunta_01():
                 i += 1
             
             # Normalizar: un solo espacio después de cada coma
-            palabras = re.sub(r'\s+', ' ', palabras)                      # Múltiples espacios a uno
-            palabras = re.sub(r'\s*,\s*', ', ', palabras)                # Comas limpias
-            palabras = palabras.strip().rstrip(',')
+            palabras = re.sub(r'\s+', ' ', palabras)
+            palabras = re.sub(r'\s*,\s*', ', ', palabras)
+            palabras = palabras.strip().rstrip(',.')  # ← corregido aquí
 
             datos.append({
                 'cluster': cluster,
